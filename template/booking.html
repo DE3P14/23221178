@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %}
+Booking
+{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Booking Page</h2>
+    <!-- Booking Tabs -->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Booking Table -->
+            <table class="table table-responsive">
+                <tbody>
+                    <tr>
+                        <th class="align-middle">First Name:</th>
+                        <td class="align-middle">
+                            <input type="text" class="form-control" id="firstNameInput" placeholder="Enter your first name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="align-middle">Last Name:</th>
+                        <td class="align-middle">
+                            <input type="text" class="form-control" id="lastNameInput" placeholder="Enter your last name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="align-middle">Email Address:</th>
+                        <td class="align-middle">
+                            <input type="email" class="form-control" id="emailInput" placeholder="Enter your email address">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="align-middle">Phone Number:</th>
+                        <td class="align-middle">
+                            <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="agreeCheckbox">
+                                <label class="form-check-label" for="agreeCheckbox">
+                                    I agree to the terms and conditions
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button onclick="window.location.href='{% url 'confirm' %}'" class="btn btn-primary">CONFIRM</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap and jQuery scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

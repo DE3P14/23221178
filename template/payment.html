@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+Payment
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center mt-5">Payment Page</h1>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <p class="lead">Please proceed with your payment to confirm your booking.</p>
+            <p>Total Amount: $100</p>
+            <hr>
+            <button type="button" class="btn btn-success btn-block">Pay through card</button>
+            <button type="button" class="btn btn-info btn-block mt-3">Pay through QR Code</button>
+            <div class="text-center mt-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="QR Code" width="500" height="500">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

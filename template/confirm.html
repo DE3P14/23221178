@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .cancel-button {
+            padding: 10px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .icon {
+            fill: #fff;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 100px;">
+        <h1>Thanks for Booking!</h1>
+        <p>Proceed to Pay</p>
+        <button class="button" onclick="window.location.href='{% url 'payment' %}'">Payment</button>
+        <button class="cancel-button" onclick="cancelBooking()">
+            Cancel Booking
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M9.82 8l3.39-3.39a.75.75 0 0 0-1.06-1.06L8.75 6.94 5.36 3.56a.75.75 0 0 0-1.06 1.06L7.69 8 4.3 11.39a.75.75 0 1 0 1.06 1.06L8.75 9.06l3.39 3.39a.75.75 0 1 0 1.06-1.06L9.82 8z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        function redirectToPayment() {
+            // Redirect to the payment page
+            window.location.href = "payment.html";
+        }
+
+        function cancelBooking() {
+            // Implement cancellation logic here
+            alert("Booking cancelled!");
+            // Redirect to the home page or any other appropriate page
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Events
+{% endblock %}
+{% block content %}
+<h2 class="text-center">EVENTS</h2>
+<div class="row">
+<div class="col-md-4">
+<div class="card text-center" style="width: 20rem; display:inline-block;margin: 20px;">
+    <img src="https://images.squarespace-cdn.com/content/v1/5db1bbf89fcdce492e5d32e9/aad098e6-cab8-4817-8e4b-c2e0e9149ab4/Epic+Celebration+Destinations+6+Unmissable+Birthday+Venues.jpg" class="card-img-top" alt="..." height="150px" width="200px">
+    <div class="card-body">
+      <h5 class="card-title">BIRTHDAY PARTY</h5>
+      <p class="card-text">VENUE: Dublin 08</p>
+      <p class="card-text">Price: 200€</p>
+      <div id="drinkDropdown" style="display: none;">
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Drink
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Drink 1</a>
+                <a class="dropdown-item" href="#">Drink 2</a>
+                <a class="dropdown-item" href="#">Drink 3</a>
+              </div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="drinkType">Alcoholic or Non-Alcoholic:</label>
+          <select class="form-control" id="drinkType">
+            <option value="alcoholic">Alcoholic</option>
+            <option value="nonalcoholic">Non-Alcoholic</option>
+          </select>
+      </div>
+      <!-- Input field for datepicker -->
+      <div class="form-group">
+          <label for="datepicker">Select Date:</label>
+          <input type="date" class="form-control" id="datepicker">
+      </div>
+      <!-- Input field for number of guests -->
+      <div class="form-group">
+          <label for="guestsInput">How many guests are you expecting:</label>
+          <input type="number" class="form-control" id="guestsInput" min="0">
+      </div>
+      <a href="booking/" role="button" class="btn btn-primary">BOOK</a>
+    </div>
+</div>
+</div>
+<div class="col-md-4">
+
+<div class="card text-center" style="width: 20rem; display:inline-block;margin: 20px;">
+  <img src="https://www.speque.com/Posts/TitleImages/5-advantages-of-a-table-booking-management-system-for-restaurants.jpg" class="card-img-top" alt="..." height="150px" width="200px">
+  <div class="card-body">
+    <h5 class="card-title">TABLE BOOKING</h5>
+    <p class="card-text">TOIT PUB</p>
+    <p class="card-text">Price: 50€ PER TABLE
+      FOOD INCLUDED VEG & NONVEG
+    </p>
+    <div id="drinkDropdown" style="display: none;">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select Drink
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Drink 1</a>
+              <a class="dropdown-item" href="#">Drink 2</a>
+              <a class="dropdown-item" href="#">Drink 3</a>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="drinkType">Alcoholic or Non-Alcoholic:</label>
+        <select class="form-control" id="drinkType">
+          <option value="alcoholic">Alcoholic</option>
+          <option value="nonalcoholic">Non-Alcoholic</option>
+        </select>
+    </div>
+    <!-- Input field for datepicker -->
+    <div class="form-group">
+        <label for="datepicker">Select Date:</label>
+        <input type="date" class="form-control" id="datepicker">
+    </div>
+    <!-- Input field for number of guests -->
+    <div class="form-group">
+        <label for="guestsInput">How many guests are you expecting:</label>
+        <input type="number" class="form-control" id="guestsInput" min="0">
+    </div>
+    <a href="booking/" role="button" class="btn btn-primary">BOOK</a>
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+
+  <div class="card text-center" style="width: 20rem; display:inline-block;margin: 20px;">
+    <img src="https://www.speque.com/Posts/TitleImages/5-advantages-of-a-table-booking-management-system-for-restaurants.jpg" class="card-img-top" alt="..." height="150px" width="200px">
+    <div class="card-body">
+      <h5 class="card-title">TABLE BOOKING</h5>
+      <p class="card-text">TOIT PUB</p>
+      <p class="card-text">Price: 50€ PER TABLE
+        FOOD INCLUDED VEG & NONVEG
+      </p>
+      <div id="drinkDropdown" style="display: none;">
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Drink
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Drink 1</a>
+                <a class="dropdown-item" href="#">Drink 2</a>
+                <a class="dropdown-item" href="#">Drink 3</a>
+              </div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="drinkType">Alcoholic or Non-Alcoholic:</label>
+          <select class="form-control" id="drinkType">
+            <option value="alcoholic">Alcoholic</option>
+            <option value="nonalcoholic">Non-Alcoholic</option>
+          </select>
+      </div>
+      <!-- Input field for datepicker -->
+      <div class="form-group">
+          <label for="datepicker">Select Date:</label>
+          <input type="date" class="form-control" id="datepicker">
+      </div>
+      <!-- Input field for number of guests -->
+      <div class="form-group">
+          <label for="guestsInput">How many guests are you expecting:</label>
+          <input type="number" class="form-control" id="guestsInput" min="0">
+      </div>
+      <a href="booking/" role="button" class="btn btn-primary">BOOK</a>
+    </div>
+  </div>
+  </div>
+
+</div>
+
+
+<div class="row">
+  <div class="col-md-4">
+  <div class="card text-center" style="width: 20rem; display:inline-block;margin: 20px;">
+      <img src="https://images.squarespace-cdn.com/content/v1/5db1bbf89fcdce492e5d32e9/aad098e6-cab8-4817-8e4b-c2e0e9149ab4/Epic+Celebration+Destinations+6+Unmissable+Birthday+Venues.jpg" class="card-img-top" alt="..." height="150px" width="200px">
+      <div class="card-body">
+        <h5 class="card-title">BIRTHDAY PARTY</h5>
+        <p class="card-text">VENUE: Dublin 08</p>
+        <p class="card-text">Price: 200€</p>
+        <div id="drinkDropdown" style="display: none;">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select Drink
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Drink 1</a>
+                  <a class="dropdown-item" href="#">Drink 2</a>
+                  <a class="dropdown-item" href="#">Drink 3</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="drinkType">Alcoholic or Non-Alcoholic:</label>
+            <select class="form-control" id="drinkType">
+              <option value="alcoholic">Alcoholic</option>
+              <option value="nonalcoholic">Non-Alcoholic</option>
+            </select>
+        </div>
+        <!-- Input field for datepicker -->
+        <div class="form-group">
+            <label for="datepicker">Select Date:</label>
+            <input type="date" class="form-control" id="datepicker">
+        </div>
+        <!-- Input field for number of guests -->
+        <div class="form-group">
+            <label for="guestsInput">How many guests are you expecting:</label>
+            <input type="number" class="form-control" id="guestsInput" min="0">
+        </div>
+        <a href="booking/" role="button" class="btn btn-primary">BOOK</a>
+      </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  
+  <div class="card text-center" style="width: 20rem; display:inline-block;margin: 20px;">
+    <img src="https://www.speque.com/Posts/TitleImages/5-advantages-of-a-table-booking-management-system-for-restaurants.jpg" class="card-img-top" alt="..." height="150px" width="200px">
+    <div class="card-body">
+      <h5 class="card-title">TABLE BOOKING</h5>
+      <p class="card-text">TOIT PUB</p>
+      <p class="card-text">Price: 50€ PER TABLE
+        FOOD INCLUDED VEG & NONVEG
+      </p>
+      <div id="drinkDropdown" style="display: none;">
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Drink
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Drink 1</a>
+                <a class="dropdown-item" href="#">Drink 2</a>
+                <a class="dropdown-item" href="#">Drink 3</a>
+              </div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="drinkType">Alcoholic or Non-Alcoholic:</label>
+          <select class="form-control" id="drinkType">
+            <option value="alcoholic">Alcoholic</option>
+            <option value="nonalcoholic">Non-Alcoholic</option>
+          </select>
+      </div>
+      <!-- Input field for datepicker -->
+      <div class="form-group">
+          <label for="datepicker">Select Date:</label>
+          <input type="date" class="form-control" id="datepicker">
+      </div>
+      <!-- Input field for number of guests -->
+      <div class="form-group">
+          <label for="guestsInput">How many guests are you expecting:</label>
+          <input type="number" class="form-control" id="guestsInput" min="0">
+      </div>
+      <a href="booking/" role="button" class="btn btn-primary">BOOK</a>
+    </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  
+    <div class="card text-center" style="width: 20rem; display:inline-block;margin: 20px;">
+      <img src="https://www.speque.com/Posts/TitleImages/5-advantages-of-a-table-booking-management-system-for-restaurants.jpg" class="card-img-top" alt="..." height="150px" width="200px">
+      <div class="card-body">
+        <h5 class="card-title">TABLE BOOKING</h5>
+        <p class="card-text">TOIT PUB</p>
+        <p class="card-text">Price: 50€ PER TABLE
+          FOOD INCLUDED VEG & NONVEG
+        </p>
+        <div id="drinkDropdown" style="display: none;">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select Drink
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Drink 1</a>
+                  <a class="dropdown-item" href="#">Drink 2</a>
+                  <a class="dropdown-item" href="#">Drink 3</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="drinkType">Alcoholic or Non-Alcoholic:</label>
+            <select class="form-control" id="drinkType">
+              <option value="alcoholic">Alcoholic</option>
+              <option value="nonalcoholic">Non-Alcoholic</option>
+            </select>
+        </div>
+        <!-- Input field for datepicker -->
+        <div class="form-group">
+            <label for="datepicker">Select Date:</label>
+            <input type="date" class="form-control" id="datepicker">
+        </div>
+        <!-- Input field for number of guests -->
+        <div class="form-group">
+            <label for="guestsInput">How many guests are you expecting:</label>
+            <input type="number" class="form-control" id="guestsInput" min="0">
+        </div>
+        <a href="booking/" role="button" class="btn btn-primary">BOOK</a>
+      </div>
+    </div>
+    </div>
+  
+  </div>
+
+
+
+<!-- Bootstrap Datepicker initialization script -->
+<script>
+  $(document).ready(function() {
+    // Initialize datepicker
+    $('#datepicker').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });
+    
+    // Toggle drink dropdown based on selection
+    $('#drinkType').change(function() {
+      if ($(this).val() === 'alcoholic') {
+        $('#drinkDropdown').show();
+      } else {
+        $('#drinkDropdown').hide();
+      }
+    });
+  });
+</script>
+{% endblock %}
+
+
