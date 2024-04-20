@@ -1,60 +1,97 @@
-{% extends 'base.html' %}
-{% block title %}
-Booking
-{% endblock %}
-{% block content %}
-<div class="container mt-5">
-    <h2 class="text-center mb-4">Booking Page</h2>
-    <!-- Booking Tabs -->
-    <div class="row">
-        <div class="col-md-12">
-            <!-- Booking Table -->
-            <table class="table table-responsive">
-                <tbody>
-                    <tr>
-                        <th class="align-middle">First Name:</th>
-                        <td class="align-middle">
-                            <input type="text" class="form-control" id="firstNameInput" placeholder="Enter your first name">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="align-middle">Last Name:</th>
-                        <td class="align-middle">
-                            <input type="text" class="form-control" id="lastNameInput" placeholder="Enter your last name">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="align-middle">Email Address:</th>
-                        <td class="align-middle">
-                            <input type="email" class="form-control" id="emailInput" placeholder="Enter your email address">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="align-middle">Phone Number:</th>
-                        <td class="align-middle">
-                            <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="agreeCheckbox">
-                                <label class="form-check-label" for="agreeCheckbox">
-                                    I agree to the terms and conditions
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- Submit Button -->
-            <div class="text-center">
-                <button onclick="window.location.href='{% url 'confirm' %}'" class="btn btn-primary">CONFIRM</button>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa; /* Set the background color */
+        }
+        .container {
+            background-color: #fff; /* Set container background color */
+            border-radius: 10px; /* Rounded corners for container */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+            padding: 30px; /* Add padding */
+            margin-top: 50px; /* Adjust margin */
+        }
+        /* Style for the table */
+        .table {
+            border: none; /* Remove table border */
+        }
+        /* Style for the form inputs */
+        .form-control {
+            border-radius: 5px; /* Rounded corners for form inputs */
+        }
+        /* Style for the submit button */
+        .btn-primary {
+            background-color: #007bff; /* Set button background color */
+            border: none; /* Remove button border */
+            border-radius: 5px; /* Rounded corners for button */
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Change button color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Booking Page</h2>
+        <!-- Booking Table -->
+        <table class="table table-responsive">
+            <tbody>
+                <tr>
+                    <th class="align-middle">First Name:</th>
+                    <td class="align-middle">
+                        <input type="text" class="form-control" id="firstNameInput" placeholder="Enter your first name">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="align-middle">Last Name:</th>
+                    <td class="align-middle">
+                        <input type="text" class="form-control" id="lastNameInput" placeholder="Enter your last name">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="align-middle">Email Address:</th>
+                    <td class="align-middle">
+                        <input type="email" class="form-control" id="emailInput" placeholder="Enter your email address">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="align-middle">Enter the Residential Address:</th>
+                    <td class="align-middle">
+                        <input type="email" class="form-control" id="emailInput" placeholder="Enter your Residential address">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="align-middle">Phone Number:</th>
+                    <td class="align-middle">
+                        <input type="tel" class="form-control" id="phoneInput" placeholder="Enter your phone number">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="agreeCheckbox">
+                            <label class="form-check-label" for="agreeCheckbox">
+                                I agree to the terms and conditions
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button onclick="window.location.href='{% url 'confirm' %}'" class="btn btn-primary">CONFIRM</button>
         </div>
     </div>
-</div>
-<!-- Bootstrap and jQuery scripts -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-{% endblock %}
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

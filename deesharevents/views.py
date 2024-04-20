@@ -1,32 +1,25 @@
 from django.shortcuts import render, redirect
 from . models import deesharevents
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login as auth_login
+from django.contrib import messages
+from .forms import UserSignUpForm
+from django.contrib.auth.decorators import login_required
 
-def signup(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        # Check if username already exists
-        if User.objects.filter(username=username).exists():
-            return render(request, 'signup.html', {'error': 'Username already exists'})
-        # Create new user
-        user = User.objects.create_user(username=username, password=password)
-        auth_login(request, user)  # Log in the user
-        return redirect('login')  # Redirect to home page after signup
-    return render(request, 'signup.html')
 
-def login(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            auth_login(request, user)  # Log in the user
-            return redirect('index')  # Redirect to home page after login
-        else:
-            return render(request, 'login.html', {'error': 'Invalid username or password'})
-    return render(request, 'login.html')
+def sign_up(request):
+    if request.method == "POST":
+        form = UserSignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            un = form.cleaned_data.get('username')
+            messages.success(request,
+                'Account has been successfully created for {}!'.format(un))
+            return redirect('login')
+
+    
+        elif request.method == "GET":
+            form = UserSignUpForm()
+
+        return render(request, 'signup.html', {'form': form})
 # Create your views here.
 def index(request):
     return render(request,'index.html')
@@ -37,10 +30,13 @@ def events(request):
     events = deesharevents.objects.all()
     # Pass events data to the template context
     return render(request, 'events.html', {'events': events})
+@login_required
 def booking(request):
     return render(request,'booking.html')
+@login_required
 def confirm(request):
     return render(request,'confirm.html')
+@login_required
 def payment(request):
     return render(request,'payment.html')
 

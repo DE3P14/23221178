@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <h2>Login</h2>
-    <form method="POST">
-        {% csrf_token %}
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        <button onclick="window.location.href='{% url 'index' %}'" >login</button>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+    <button type="submit">Sign In</button>
+    </div>
+    <p></p>
+    <div>
+    If you don't have an account yet
+    <a href="{% url 'signup' %}">Sign Up</a>
+    </div>
     </form>
-</body>
-</html>
+    
