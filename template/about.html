@@ -3,5 +3,44 @@
 About
 {% endblock %}
 {% block content %}
-About Page
+<div class="container">
+    <!-- Image Card -->
+    <div class="card">
+        <img src="https://wallpapercave.com/wp/wp7488228.jpg" alt="Image">
+    </div>
+    <!-- Text Card -->
+    <div class="card">
+        <div class="card-content">
+            <h2>DEESHAR</h2>
+            <p>DEESHAR Events' online venue search engine. Users can find all of the information they need before deciding on a venue for their party or any other occasion. Corporate or birthday parties, cozy cafes for a little celebration, or a large location for an elaborate party, you'll find it all here.</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .card {
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .card-content {
+        padding: 20px;
+    }
+    h2 {
+        margin-top: 0;
+    }
+</style>
